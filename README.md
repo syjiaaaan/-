@@ -24,21 +24,39 @@ PORT=3000 node server-hostinger.mjs
 | `LLM_MODEL` | 默认 `deepseek-v4-pro` |
 | `SESSION_SECRET` | 会话 Cookie 签名密钥 |
 
-## 部署到 Vercel（可选）
+## 部署
+
+### Cloudflare Pages（推荐）
+
+见 [docs/CLOUDFLARE.md](docs/CLOUDFLARE.md)。静态 `public/` + Functions `functions/`。
+
+```bash
+npx wrangler login
+npx wrangler pages deploy public --project-name zhiyu-tongluren
+```
+
+### Hostinger / VPS Node
+
+```bash
+PORT=3000 node server-hostinger.mjs
+```
+
+见 [docs/HOSTINGER.md](docs/HOSTINGER.md)。
+
+### Vercel（可选）
 
 ```bash
 vercel deploy --prod
 ```
 
-使用 `api/` 下的 Serverless Functions；环境变量同上。
-
 ## 结构
 
 ```
-public/               前端
+public/               前端静态资源
+functions/            Cloudflare Pages Functions
 api/                  Vercel Serverless（可选）
-server-hostinger.mjs  Hostinger/VPS 一体化 Node 服务
-docs/HOSTINGER.md     Hostinger 部署说明
+server-hostinger.mjs  Hostinger/VPS Node 服务
+docs/                 部署说明
 ```
 
 ## 说明
