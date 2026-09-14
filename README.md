@@ -1,17 +1,15 @@
 # 知遇.同路人
 
-基于知乎公开数据 + AI 的同路人匹配 Demo（OAuth 登录 → 用户数据快照 → AI 生成画像/匹配/擦肩 → Agent 互聊 → 真人接管）。
+基于知乎公开数据 + AI 的同路人匹配（OAuth 登录 → 用户数据快照 → AI 生成画像/匹配/擦肩 → Agent 互聊 → 真人接管）。
 
-## 本地运行
+## 本地 / VPS / Hostinger（推荐 Node 一体化）
 
 ```bash
-# 仅静态预览（演示能力有限）
-python -m http.server 4173
-# 或 Node
-npm start
+# 设置环境变量后
+PORT=3000 node server-hostinger.mjs
 ```
 
-推荐使用 Vercel Serverless API（见 `api/`），密钥放在环境变量，不要写进仓库。
+详细步骤见 [docs/HOSTINGER.md](docs/HOSTINGER.md)。
 
 ## 环境变量
 
@@ -26,26 +24,24 @@ npm start
 | `LLM_MODEL` | 默认 `deepseek-v4-pro` |
 | `SESSION_SECRET` | 会话 Cookie 签名密钥 |
 
-## 部署（Vercel）
+## 部署到 Vercel（可选）
 
 ```bash
-npm i -g vercel
 vercel deploy --prod
 ```
 
-在 Vercel 项目设置中配置上表环境变量；回调地址示例：
-
-`https://<你的域名>/auth/callback`
+使用 `api/` 下的 Serverless Functions；环境变量同上。
 
 ## 结构
 
 ```
-public/     前端静态资源与主应用
-api/        Serverless：OAuth / 用户快照 / LLM / 知乎搜索
-lib/        本地 Node 开发用 OAuth 库（可选）
+public/               前端
+api/                  Vercel Serverless（可选）
+server-hostinger.mjs  Hostinger/VPS 一体化 Node 服务
+docs/HOSTINGER.md     Hostinger 部署说明
 ```
 
 ## 说明
 
-- 仅用于黑客松/演示；请遵守知乎开放平台协议与用户隐私要求。
+- 仅用于黑客松/演示；遵守知乎开放平台协议与用户隐私要求。
 - 密钥、Access Secret、OAuth Token 切勿提交到 Git。
