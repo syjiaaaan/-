@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>知遇.同路人 · 答案之外，找到走过这条路的人</title>
+  <meta name="description" content="OAuth 获取你的知乎公开数据，AI 分析后生成 Soul Profile、同路人匹配与擦肩。" />
+  <meta name="theme-color" content="#0084FF" />
+  <meta name="color-scheme" content="light" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="知遇.同路人 MVP" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="知遇.同路人" />
+  <meta property="og:title" content="知遇.同路人 · 答案之外，找到走过这条路的人" />
+  <meta property="og:description" content="Agent 先相遇，让人与人真正认识。找到同路人、前路人、补路人与异路人。" />
+  <meta property="og:image" content="./assets/hero-main.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="知遇.同路人 · 答案之外，找到走过这条路的人" />
+  <meta name="twitter:description" content="Agent 先相遇，让人与人真正认识。" />
+  <meta name="twitter:image" content="./assets/hero-main.jpg" />
+
+  <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./logo.svg" />
+  <link rel="canonical" href="./" />
+
+  <link rel="stylesheet" href="./styles.css?v=20260915a" />
+</head>
+<body>
+  <div id="app">
+    <nav class="nav" id="main-nav">
+      <div class="nav-inner">
+        <a href="#/" class="nav-logo" data-link>
+          <img class="logo-mark-img" src="./logo.svg" alt="知遇.同路人" width="36" height="36" />
+          <span class="logo-text">知遇.<span class="logo-accent">同路人</span></span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="#/" data-link class="nav-link" data-route="/">首页</a>
+          <a href="#/find" data-link class="nav-link" data-route="/find">找同路人</a>
+          <a href="#/encounter" data-link class="nav-link" data-route="/encounter">今日擦肩</a>
+          <a href="#/map" data-link class="nav-link" data-route="/map">同行地图</a>
+          <a href="#/soul" data-link class="nav-link" data-route="/soul">Soul Agent</a>
+          <a href="#/profile" data-link class="nav-link" data-route="/profile">我的知乎</a>
+        </div>
+        <div class="nav-right">
+          <a href="#/demo" data-link class="nav-demo-btn" title="一键演示">Demo</a>
+          <a href="#/settings" data-link class="nav-settings" title="隐私与社交意愿">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </a>
+        </div>
+        <button class="nav-menu-btn" id="nav-menu-btn" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main id="page-root" class="page-root"></main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-tagline">AI 已经可以回答几乎所有问题。<br/>但有些问题，我们真正需要的是一个走过这条路的人。</p>
+        <p class="footer-meta">知遇.同路人 · 内置提示词 · AI 生成各页内容 · 后端代理保护密钥</p>
+      </div>
+    </footer>
+
+    <div class="cursor-pet" id="cursor-pet" aria-hidden="true">
+      <div class="pet-bubble" id="pet-bubble">我在跟着你～</div>
+      <img src="./assets/pet-act-1.webp" alt="" draggable="false" />
+    </div>
+  </div>
+
+  <script src="./data.js?v=20260915c"></script>
+  <script src="./matching.js?v=20260915c"></script>
+  <script src="./store.js?v=20260915c"></script>
+  <script src="./prompts.js?v=20260915c"></script>
+  <script src="./api.js?v=20260915c"></script>
+  <script src="./generate.js?v=20260915b"></script>
+  <script src="./app.js?v=20260915b"></script>
+  <script src="./ui.js?v=20260915a"></script>
+  <script src="./share-card.js?v=20260915a"></script>
+  <script src="./pet.js?v=20260915a"></script>
+</body>
+</html>

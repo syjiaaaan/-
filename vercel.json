@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/auth/callback", "destination": "/api/oauth/callback" }
+  ]
+}

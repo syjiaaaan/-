@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="知遇.同路人">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B4FD9"/>
+      <stop offset="45%" stop-color="#1E7CFF"/>
+      <stop offset="100%" stop-color="#6EC8FF"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#D6EBFF" stop-opacity=".75"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D9BFF"/>
+      <stop offset="100%" stop-color="#0D5FE0"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <!-- sun -->
+  <circle cx="92" cy="34" r="12" fill="#F5FBFF" opacity=".95"/>
+  <!-- far hills -->
+  <path d="M0 72 C18 52 34 48 50 58 C62 65 72 62 88 50 C100 42 114 44 128 56 L128 88 L0 88 Z" fill="#2F86F0" opacity=".55"/>
+  <path d="M0 80 C22 64 40 62 56 72 C70 80 84 74 100 64 C110 58 120 60 128 68 L128 100 L0 100 Z" fill="#1A6FE8" opacity=".7"/>
+  <!-- ground -->
+  <ellipse cx="64" cy="108" rx="70" ry="28" fill="url(#hill)"/>
+  <!-- road -->
+  <path d="M78 118 C70 96 86 86 92 72 C98 58 88 48 76 42 C70 39 68 36 70 32" stroke="url(#road)" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/>
+  <!-- people -->
+  <g fill="#FFFFFF">
+    <!-- left person -->
+    <circle cx="48" cy="52" r="12"/>
+    <path d="M34 92 C34 74 38 64 48 64 C58 64 62 74 62 92 Z"/>
+    <!-- right person -->
+    <circle cx="70" cy="58" r="10"/>
+    <path d="M58 92 C58 78 62 70 70 70 C78 70 82 78 82 92 Z"/>
+    <!-- arm around -->
+    <path d="M56 74 C60 70 66 70 72 74" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- backpack -->
+  <rect x="30" y="66" width="18" height="22" rx="6" fill="#1B6CFF"/>
+  <text x="39" y="82" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">知</text>
+  <!-- sparkle -->
+  <path d="M28 28 l2.2 5.8 5.8 2.2 -5.8 2.2 -2.2 5.8 -2.2-5.8 -5.8-2.2 5.8-2.2 Z" fill="#FFFFFF"/>
+</svg>

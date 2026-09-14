@@ -1,0 +1,11 @@
+node_modules
+.vercel
+.env
+.env.*
+*.log
+server.mjs
+lib/
+tests/
+scripts/
+.codex/
+hackathon.config.json
